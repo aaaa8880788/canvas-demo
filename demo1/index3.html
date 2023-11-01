@@ -1,0 +1,113 @@
+<!-- 绘制两条一样的线 -->
+<!-- <canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 第一条线
+  cxt.moveTo(20, 100)
+  cxt.lineTo(200, 100)
+  cxt.lineWidth = 10
+  cxt.strokeStyle = 'pink'
+  cxt.stroke()
+
+  // 第二条线
+  cxt.moveTo(20, 120.5)
+  cxt.lineTo(200, 120.5)
+  cxt.stroke()
+</script> -->
+
+<!-- 绘制两条不一样的线 -->
+<!-- 1.使用 beginPath() 方法，重新开一个路径 -->
+<!-- 2.设置新线段的样式（必须项） -->
+<!-- 上面缺了其中一步都会有影响 -->
+
+<!-- 如果只使用 beginPath() -->
+<!-- 第二条线会受到第一条线的影响 -->
+<!-- <canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 第一条线
+  cxt.moveTo(20, 100)
+  cxt.lineTo(200, 100)
+  cxt.lineWidth = 10
+  cxt.strokeStyle = 'pink'
+  cxt.stroke()
+
+  // 第二条线
+  cxt.beginPath() // 重新开启一个路径
+  cxt.moveTo(20, 120.5)
+  cxt.lineTo(200, 120.5)
+  cxt.stroke()
+</script> -->
+
+<!-- 但如果使用了 beginPath() ，后面的线段不会影响前面的线段。 -->
+<!-- <canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 第一条线
+  cxt.moveTo(20, 100)
+  cxt.lineTo(200, 100)
+  cxt.stroke()
+
+  // 第二条线
+  cxt.beginPath() // 重新开启一个路径
+  cxt.moveTo(20, 120.5)
+  cxt.lineTo(200, 120.5)
+  cxt.lineWidth = 4
+  cxt.strokeStyle = 'red'
+  cxt.stroke()
+</script> -->
+
+<!-- 设置新线段的样式，没使用 beginPath() 的情况 -->
+<!-- 后面的线能影响前面的线。 -->
+<!-- <canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 第一条线
+  cxt.moveTo(20, 100)
+  cxt.lineTo(200, 100)
+  cxt.lineWidth = 10
+  cxt.strokeStyle = 'pink'
+  cxt.stroke()
+
+  // 第二条线
+  cxt.moveTo(20, 120.5)
+  cxt.lineTo(200, 120.5)
+  cxt.lineWidth = 4
+  cxt.strokeStyle = 'red'
+  cxt.stroke()
+</script> -->
+
+<!-- 正确的做法 -->
+<!-- 在设置 beginPath() 的同时，也各自设置样式。这样就能做到相互不影响了。 -->
+
+<!-- <canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.moveTo(20, 100)
+  cxt.lineTo(200, 100)
+  cxt.lineWidth = 10
+  cxt.strokeStyle = 'pink'
+  cxt.stroke()
+
+  cxt.beginPath() // 重新开启一个路径
+  cxt.moveTo(20, 120.5)
+  cxt.lineTo(200, 120.5)
+  cxt.lineWidth = 4
+  cxt.strokeStyle = 'red'
+  cxt.stroke()
+</script> -->
