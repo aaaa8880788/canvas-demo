@@ -1,0 +1,11 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.strokeStyle = 'red'
+  cxt.strokeRect(50, 50, 200, 100) // strokeRect(x, y, width, height)
+  cxt.fillStyle = 'yellow'
+  cxt.fillRect(50, 50, 200, 100) // fillRect(x, y, width, height)
+</script>

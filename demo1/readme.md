@@ -1,4 +1,4 @@
-## 线
+## 直线
 demo看index.html
 ## 注意点
 1.默认宽高
@@ -45,3 +45,7 @@ demo看index2.html
 在绘制多条线段的同时，还要设置线段样式，通常需要开辟新路径。
 要不然样式之间会相互污染。
 demo看index3.html
+
+## 折线
+
+如index4.html所示
