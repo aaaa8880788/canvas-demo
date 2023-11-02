@@ -1,0 +1,11 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.moveTo(40, 40)
+  cxt.arcTo(120, 40, 120, 120, 80)
+
+  cxt.stroke()
+</script>

@@ -1,0 +1,17 @@
+<style>
+  #dogImg {
+    display: none;
+  }
+</style>
+
+<img src="./image/表情.png" id="dogImg"/>
+<canvas id="c" width="500" height="500" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  const image = document.getElementById('dogImg')
+
+  cxt.drawImage(image, 70, 70)
+</script>

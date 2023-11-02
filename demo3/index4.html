@@ -1,0 +1,10 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.beginPath()
+  cxt.arc(150, 150, 100, 0, 30 * Math.PI / 180)
+  cxt.stroke()
+</script>

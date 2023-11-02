@@ -1,0 +1,27 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 线宽 10
+  cxt.beginPath()
+  cxt.moveTo(50, 50)
+  cxt.lineTo(250, 50)
+  cxt.lineWidth = 10 // 设置线宽
+  cxt.stroke()
+
+  // 线宽 20
+  cxt.beginPath()
+  cxt.moveTo(50, 150)
+  cxt.lineTo(250, 150)
+  cxt.lineWidth = 20 // 设置线宽
+  cxt.stroke()
+
+  // 线宽 30
+  cxt.beginPath()
+  cxt.moveTo(50, 250)
+  cxt.lineTo(250, 250)
+  cxt.lineWidth = 30 // 设置线宽
+  cxt.stroke()
+</script>

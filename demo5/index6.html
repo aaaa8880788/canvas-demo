@@ -1,0 +1,34 @@
+<canvas id="c" width="800" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  // 横向的辅助线（参考线，在画布中间）
+  cxt.moveTo(0, 150)
+  cxt.lineTo(800, 150)
+  cxt.strokeStyle = 'red'
+  cxt.stroke()
+
+  cxt.font = '20px Arial'
+
+  // 默认 alphabetic
+  cxt.textBaseline = 'alphabetic'
+  cxt.fillText('雷猴 alphabetic', 10, 150)
+
+  // 默认 top
+  cxt.textBaseline = 'top'
+  cxt.fillText('雷猴 top', 200, 150)
+
+  // 默认 bottom
+  cxt.textBaseline = 'bottom'
+  cxt.fillText('雷猴 bottom', 320, 150)
+
+  // 默认 middle
+  cxt.textBaseline = 'middle'
+  cxt.fillText('雷猴 middle', 480, 150)
+
+  // 默认 hanging
+  cxt.textBaseline = 'hanging'
+  cxt.fillText('雷猴 hanging', 640, 150)
+</script>

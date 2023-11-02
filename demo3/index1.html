@@ -1,0 +1,13 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.moveTo(150, 50)
+  cxt.lineTo(250, 100)
+  cxt.lineTo(150, 150)
+  cxt.lineTo(50, 100)
+  cxt.closePath()
+  cxt.stroke()
+</script>
