@@ -1,0 +1,30 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+  
+  cxt.lineWidth = 20
+
+  // 默认，尖角
+  cxt.moveTo(50, 40)
+  cxt.lineTo(200, 40)
+  cxt.lineTo(200, 90)
+  cxt.stroke()
+
+  // 斜角 bevel
+  cxt.beginPath()
+  cxt.moveTo(50, 140)
+  cxt.lineTo(200, 140)
+  cxt.lineTo(200, 190)
+  cxt.lineJoin = 'bevel'
+  cxt.stroke()
+
+  // 圆角 round
+  cxt.beginPath()
+  cxt.moveTo(50, 240)
+  cxt.lineTo(200, 240)
+  cxt.lineTo(200, 290)
+  cxt.lineJoin = 'round'
+  cxt.stroke()
+</script>

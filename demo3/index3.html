@@ -1,0 +1,14 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.beginPath()
+  cxt.arc(150, 150, 100, 0, 180 * Math.PI / 180) // 顺时针
+  // cxt.arc(150, 150, 100, 0, 180 * Math.PI / 180, false) // 顺时针
+  // cxt.arc(150, 150, 100, 0, 180 * Math.PI / 180, true) // 逆时针
+  cxt.closePath()
+
+  cxt.stroke()
+</script>

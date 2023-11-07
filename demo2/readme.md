@@ -1,5 +1,4 @@
 ## 矩形(strokeRect)
-
 1.使用线段描绘矩形,如<index.html>所示
 2.使用 strokeRect() 描边矩形 如<index1.html>所示
 strokeStyle：设置描边的属性（颜色、渐变、图案）
@@ -18,3 +17,12 @@ fillRect() 和 strokeRect() 方法差不多，但 fillRect() 的作用是填充
 使用 rect() 生成矩形 如<index4.html>所示
 rect() 和 fillRect() 、strokeRect() 的用法差不多，唯一的区别是：
 strokeRect() 和 fillRect() 这两个方法调用后会立即绘制；rect() 方法被调用后，不会立刻绘制矩形，而是需要调用 stroke() 或 fill() 辅助渲染。
+
+## 清空矩形(clearRect)
+使用 clearRect() 方法可以清空指定区域。如<index5.html>所示
+
+canvas 画布元素是矩形，所以可以通过下面的代码把整个画布清空掉。
+```javascript
+// 省略部分代码
+cxt.clearRect(0, 0, cnv.width, cnv.height)
+```

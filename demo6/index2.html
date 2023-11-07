@@ -1,0 +1,13 @@
+<canvas id="c" width="500" height="500" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  const image = new Image()
+  image.src = './image/表情.png'
+
+  image.onload = () => {
+    cxt.drawImage(image, 30, 30, 300, 300)
+  }
+</script>

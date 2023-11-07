@@ -1,0 +1,11 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.fillStyle = 'pink' // 设置填充颜色
+  cxt.fillRect(50, 50, 200, 200) // 填充矩形
+
+  cxt.clearRect(60, 60, 180, 90) // 清空矩形
+</script>

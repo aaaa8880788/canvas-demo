@@ -1,0 +1,12 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  let text = '雷猴'
+  cxt.font = 'bold 40px Arial'
+  cxt.fillText(text, 40, 80)
+
+  console.log(cxt.measureText(text).width) // 80
+</script>

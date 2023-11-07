@@ -1,0 +1,21 @@
+<canvas id="c" width="300" height="300" style="border: 1px solid #ccc;"></canvas>
+
+<script>
+
+  const cnv = document.getElementById('c')
+  const cxt = cnv.getContext('2d')
+
+  cxt.moveTo(50, 50)
+  cxt.lineTo(200, 50)
+  cxt.lineTo(200, 200)
+
+  // 注意点：如果使用 lineTo 闭合图形，是不能很好闭合拐角位的。
+  // cxt.lineTo(50, 50) // 闭合
+  // 正确闭合
+  cxt.closePath()
+  cxt.lineJoin = 'round' // 线条连接的样式。miter: 默认; bevel: 斜面; round: 圆角
+  cxt.lineWidth = 20
+
+  cxt.stroke()
+
+</script>
